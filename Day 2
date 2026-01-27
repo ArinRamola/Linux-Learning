@@ -1,0 +1,32 @@
+To read a manual page there are some ways or rules i would say-
+to understand this i would rather use an example-
+if you man which--
+it would show you rather the manual to use the ehich command-
+in synopsis its the method to apply and Description tells about it.
+now synopsis says - which [a] filename ...
+now which is command in this 
+a is option which optional which is told by the square bracket its in inside.
+filename is the command name
+and ... - ellipses tells that it can take more than one command
+like you can give which date cal
+<>- anything in the angle bracket must to have. mean its not optional
+if man sometimes not work use help
+
+Data Stream is basically flow of data simply from one place to another
+there are four data streams-
+Standard Input- pipe for input
+Standard Output - pipe for normal output
+Standard Error- pip for error
+Extra Data Stream - An extra pipe you can create and use for anything.
+now there are ways you can redirect in these pipelines
+-> 1> - to redirect the output
+-> 2> - to redirect the error
+-> 3> - to redirect FD3 mainly for pipeline
+
+For Redirection we use -
+> -redirects with truncate
+>> - redirects with appending
+
+
+
+
