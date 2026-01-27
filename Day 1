@@ -1,0 +1,21 @@
+Command = CommandName -options input
+options modify a commands behaviour
+Ex - if cal gives calender
+and if cal 12 2025 gives the month of december 2025
+then cal -A 1 12 2025 - this will give you december and a month after the December
+same if you give cal -B 1 12 2025 - this will give you december and a month before December.
+
+NOW
+there is diffent types of command roughly if divided these are-
+- (1) User Command - command that is used by anyone like cal, who and etc.
+- (2) System Calls - command that is used to make calls to the Kernal which is a low level part pretty much dealing with hardware.
+- (3) C Library functions - libraries and function that provide interfaces to specific things in your computer.
+- (4) Devices and Special Files- things such as CD drives and USB ports etc.
+- (5)File Formats and Conventions - Deals with file formats and structuring.
+- (1)Games- Sections for games they have their own section for commands and all.
+- (1)Miscellaneous - stuff like file system and protocols.
+- (1) System Administration - commands for sudo.
+
+NOW
+we use - man -k name_of_the_command_you_want_to_search.   
+when searched like this it give anything releveant to the command but also gives their section no.
