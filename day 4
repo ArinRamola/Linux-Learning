@@ -1,0 +1,21 @@
+when you see line like this 
+  Arin@zyan:~
+    so Arin is the user
+    @ is at
+    Zyan is device name
+    : - is your colon
+    ~ - is your squiggle which is officially called tilde which represent home directory
+
+pwd
+path from / hoem directory is absolute path
+ls
+ls -F - here -F is used to classify
+ls -l - list in long form - also shows permission on the file
+ls -lh - long form but a little more human readable
+ls -a - to see hidden files
+cd
+cd ..
+cd path
+
+
+      
