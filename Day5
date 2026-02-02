@@ -20,5 +20,6 @@ mkdir {jan,feb,march,april,may,june,july,august,september,october,november,decem
 same for no. in a series you can do - mkdir {1..10}- make file from 1 to 10
 same can be done to create multiple file using touch
 or you can also do is ----- touch {jan,feb}_{2026..2027}/file{1..10}
-now inside folders of jan and feb from both years you will get file1 to file10
-
+now inside folders of jan and feb from both years you will get file1 to file10T
+To create a entire path like Folder B inside Folder A and Folder C inside Folder B use -p
+--- mkdir -p A/B/C
