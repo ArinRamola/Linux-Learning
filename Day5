@@ -1,0 +1,24 @@
+Handling diffrent types of file in linux
+-  linux doesn't care about the type of extension
+so if you write - file tux.png or file tux.jpg ---- result would be same
+so what happen is every file has a header which tells its type or extension
+so even if you change the extension of that file - its would still show same result
+so in linux you have the freedom to name your files as per your wish like file.arin
+but dont try to confuse the third part software. like make .pdf to .txt. it will still show it as .pdf but when open it may throw error.
+
+
+if you want to see anything that starts with any letter like - D-
+so just enter ls D* -- it will show all folders starting with D
+make sure they are correct case as they are case -sensitive
+so if you do ls *.txt - it shows anything that is with extension .txt
+
+to make a file use mkdir
+if you use mkdir happy birthday - two file happy and birthday would be created
+so use " " to if you want to make a file Happy Birthday
+to make mutliple files that record thing every month for two year-
+mkdir {jan,feb,march,april,may,june,july,august,september,october,november,december}_{2026,2027}
+same for no. in a series you can do - mkdir {1..10}- make file from 1 to 10
+same can be done to create multiple file using touch
+or you can also do is ----- touch {jan,feb}_{2026..2027}/file{1..10}
+now inside folders of jan and feb from both years you will get file1 to file10
+
