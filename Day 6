@@ -1,0 +1,51 @@
+Locate Command-
+locate anypattern like name or anyhting
+ex locate *.conf
+---give path of all the files ending with .conf
+it also locate case sensitively so use -i to locate case insensitively
+use --limit no. -- to use no. of results you want to limit
+it find all the data using the database. 
+in fact it can find database itself use = locate -S
+since you cant know for sure if a file exist in database use-
+locate --existing .*conf ----- gives files with .conf that exist in the database
+since locate command do use database to work.
+Now since ther eare times that database do not update the file that's in your system we use -
+sudo updatedb- since its a system admin privilege command
+
+Find-
+find is same as Locate with the diffrence it finds the file in real time.
+It scans the file system in real life.
+Its slower than locate but more reliable than the locate.
+- find filename
+- find file_path
+-find ---- shows every single file and folder in the file system within which directory you are currently in.
+- depth is how deep a find will go. so like how many folder it will go inside.
+so if you write
+- find . -maxdepth 1 --- so it will find maximum one depth in the current directory( . ).
+if want only file from current directory
+- find . -type f
+if only want folders from current directory
+- find . -type d
+combine the commands
+- find . -type f -maxdepth 1 -- show file only upto one depth
+
+to find a file using name
+- find . -name "file1.txt"
+-find . - name "*.txt"
+-find . -maxdepth 2 -name "*.txt"
+use -iname for case insensitive.
+
+to find file based on size
+-find / -type f -size +100k --- find file larger than 100kb from root
+-find / -type f -size -100k --- find file smaller than 100kb from root( /)
+use sudo if you get access denied
+we can also count the no. of line from the result using piping-
+- sudo find / -type f -size +100k -size -5M | wc -l
+if you want to use something like AND no need to do anything just do but if you want to use OR then-
+- sudo find / -type f -size +100k -o -size -5M | wc -l
+-sudo find / -type f -size +100M -size -5M
+
+exec 
+-sudo find / -type f -size +100M -o -size -5M -exec cp {} ~/Desktop/copy_here \;
+
+
