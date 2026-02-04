@@ -1,0 +1,20 @@
+Continuing the find command-
+
+sudo find / -type f -size +100k -size -5M -exec cp {} -/Desktop/copy_here \; -- copy results to the copy_here folder
+sudo find / -type f -size +100k -size -5M -ok cp {} -/Desktop/copy_here \; --  if we use ok so now everytime before copying something it will ask if its ok to copy that file
+mkdir haystack/folder{1..500} -exec
+touch haystack/folder{1..500}/file{1..100}
+touch haystack/folder$(shuf -i 1-500 -n 1)/needle.txt  - basicaly makes a file needle.txt and put it in one the folders among the 500 folders randomly
+find haystack/ -type f -name "needle.txt" -exec {} ~/Desktop \;
+
+Viewing a file
+- cat filename
+-cat file1 file2 file3
+-tac filename -- result would be last line first and first line last
+-cat file[1-5]
+- rev filename - reverse words in each line
+
+
+
+
+
