@@ -13,6 +13,12 @@ Viewing a file
 -tac filename -- result would be last line first and first line last
 -cat file[1-5]
 - rev filename - reverse words in each line
+- cat filename | head -n 5 --- by default the head command gives first 10 lines so we modified it to only give first 5 lines
+or simply 
+- head -n 5 filename
+- head -n 5 filename | wc -l
+-tail -n 5 filename - tail for last 10 lines
+
 
 
 
