@@ -1,0 +1,73 @@
+Sorting -
+
+-sort filename - it by default sorts line from a to z
+-sort filename | tac - a way to reverse sort
+-sort -r filename -- in built way to reverse
+-sort number.txt --- in a file with numbers instead of sorting by value it sort based on the first digit of that number
+-sort -n number.txt ---- to sort numerically
+-sort -u number.txt ---- to get only the unique number
+-ls -l /etc | head -n 15 | sort -k 5n - so its show all files of etc and only show 15 lines and sort it numerically
+as per the 5th column.
+-ls -lh /etc | head -n 15 | sort -k 5nr - same but now size in human readable format and but now it will not show proper sorting
+-ls -lh /etc | head -n 15 | sort -k 5hr - now it will sort in human readable format.
+-ls -lh /etc | head -n 15 | sort -k 6M - now to sort date as per months
+-ls -l /etc | head -n 15 | sort -k 2n
+
+Archiving and Compression-
+
+tar - to compress
+c - to archive
+v- verbose - let one know what system is doing
+f- to let tar accept files
+- tar -cvf newcompressed.tar file[1-3].txt
+a tar file can be more bigger in space compared to all the total file size inside it
+-tar -tf filename.tar - to see the inside the tar file 't' her emeans test label
+- tar -cvf filename.tar - to extract
+for compression we generally use bzip or gzip - gzip for faster but less compression and bzip for slower but more compression
+- bzip2 filename.tar - this will decrease the size of the file
+it give filename.tar.bz2 so to unzip
+- bunzip filename.tar.bz2 
+if you just want zip file commomnly used in windows then use-
+-zip filename.zip path
+-unzip filename.zip
+so to create a tar and a zip file in one go
+- tar -czvf filename path-to-the-file-to-be-compressed
+
+- Scripting intro -
+file name should be ending with .sh
+- vim script.sh
+the file should start with -
+- #!/bin/bash   --- for bash
+- #!/bin/python  ----- for python
+now inside this file write any commands or make any pipeline that you want to be done once executed
+also while writing if you dont want the error of the command or pipeline just direct it to bit bucket(2>dev/null).
+
+Now say you created a file named backup where once executed all the data of your pc goes to a single zip folder. To make it
+run and execute as a command we will put it in .bashrc in bottom.
+- PATH="$PATH:$HOME/bin"
+since  we created a directory bin inside Home directory where bin contain all the scripts.
+
+Cron - scheduling
+Crontab - contains command and scripts that will run automatically
+crontab -e ---- to edit a crontab
+crontab has # lines that are kind of comments that dont interfere
+each crontab is broken into rows and one row is for each command or script that you want to schedule.
+each row will have six columns 
+so the the first five columns are scheduling information and final sixth for command or script to be run at scheduled time.
+first column - minute --- at which minute script should execute
+second coulumn - hour ---- at which hour scipt or command should execute
+third column - day of month ------ at which day of month it should execute
+fourth column - month --- at which month it should execute
+fifth column -day of week ----- at which day of the week it will execute
+sixth column - command or script to execute
+-  25 10 3 1 * echo "Hello World" >> ~/Desktop/Hello_world.txt ------ so what it will do is that every 3rd of January At 
+10:25 am this script will execute.
+TO  make it run every some minutes or some hours or even some days use '*/'.
+- */3 */1 * * * echo "hello worls" --- every 1hour and every 3 minutes hello worls would be executed.
+- 50 18 * 12,11,10 MON echo "heheeh" ---- every december november and october during mondays at 6:50 pm this will execute.
+- 50 18 * * MON bash script.sh ----- every monday 6:50pm this script would executed.
+
+
+
+
+
